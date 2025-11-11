@@ -1,0 +1,2 @@
+- [x] Update todo-app/src/index.css: Add @keyframes for title bounce animation, and styles for .sakura container and .petal elements with falling animation.
+- [x] Update todo-app/src/App.tsx: Add <div className="sakura"> with 20 <div className="petal"></div> elements inside .app-container.
