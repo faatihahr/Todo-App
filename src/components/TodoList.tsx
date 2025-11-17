@@ -49,13 +49,14 @@ const TodoList: React.FC<TodoListProps> = ({ todos, onToggle, onUpdate, onDelete
   return (
     <ul className="list-none p-0 m-0">
       {todos.map(todo => (
-        <li key={todo.id} className="flex items-center bg-pink-50 rounded-[15px] p-4 mb-2 shadow-[0_4px_10px_rgba(219,112,147,0.1)] transition-all duration-200 hover:translate-y-[-2px] hover:shadow-[0_6px_15px_rgba(219,112,147,0.2)]">
+        <li key={todo.id} className="flex items-center bg-pink-50 rounded-[15px] p-4 mb-2 shadow-[0_4px_10px_rgba(219,112,147,0.1)] transition-all duration-200 hover:translate-y-0.5
+         hover:shadow-[0_6px_15px_rgba(219,112,147,0.2)]">
           <Checkbox
             checked={todo.completed}
             onCheckedChange={() => onToggle(todo.id)}
             className="mr-4 border-pink-500 data-[state=checked]:bg-pink-500 data-[state=checked]:text-pink-50 scale-[1.2]"
           />
-          <div className="flex-grow mr-2">
+          <div className="grow mr-2">
             {editingId === todo.id ? (
               <input
                 type="text"

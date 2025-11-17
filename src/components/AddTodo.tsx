@@ -17,12 +17,12 @@ const AddTodo: React.FC<AddTodoProps> = ({ value, onChange, onAdd, isLoading = f
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder="Add new todo..."
-        className="flex-grow p-4 rounded-[15px] bg-pink-50 text-pink-700 border-pink-200 placeholder:text-pink-400 focus:border-pink-400"
+        className="grow p-4 rounded-[15px] bg-pink-50 text-pink-700 border-pink-200 placeholder:text-pink-400 focus:border-pink-400"
       />
       <Button
         onClick={onAdd}
         disabled={isLoading}
-        className="p-4 bg-pink-500 text-pink-50 rounded-[15px] hover:bg-pink-600 transition-colors min-w-[56px] disabled:opacity-50 disabled:cursor-not-allowed"
+        className="p-4 bg-pink-500 text-pink-50 rounded-[15px] hover:bg-pink-600 transition-colors min-w-14 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isLoading ? <Loader className="w-6 h-6 animate-spin" /> : <Pen className="w-6 h-6" />}
       </Button>

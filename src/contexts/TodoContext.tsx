@@ -2,8 +2,6 @@ import React, { createContext, useState, useEffect } from 'react'
 import type { ReactNode } from 'react'
 import type { Todo, TodoContextType } from '../hooks/useTodo'
 
-export const TodoContext = createContext<TodoContextType | undefined>(undefined)
-
 interface TodoProviderProps {
   children: ReactNode
 }
@@ -65,3 +63,5 @@ export const TodoProvider: React.FC<TodoProviderProps> = ({ children }) => {
 
   return <TodoContext.Provider value={value}>{children}</TodoContext.Provider>
 }
+
+export const TodoContext = createContext<TodoContextType | undefined>(undefined)
